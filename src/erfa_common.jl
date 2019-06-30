@@ -162,8 +162,10 @@ struct LDBODY
     pv::NTuple{6,Cdouble}
 end
 
-struct ERFAExcpetion <: Exception
+struct ERFAException <: Exception
     msg::String
 end
 
-Base.showerror(io::IO, ex::ERFAExcpetion) = print(io, ex.msg)
+Base.showerror(io::IO, ex::ERFAException) = print(io, ex.msg)
+
+export ERFAException
